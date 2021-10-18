@@ -35,6 +35,7 @@ class UpComingMoviesAdapter(private var mOnUpComingMoviesListener: OnUpComingMov
                 .placeholder(R.drawable.loding_animation)
                 .error(R.drawable.poster_placeholder)
                 .into(itemBinding.posterImage)
+            //itemBinding.subjectName.text = subjectName
 
 
             itemBinding.posterImage.setOnClickListener {
