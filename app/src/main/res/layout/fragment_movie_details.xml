@@ -79,6 +79,13 @@
                 app:layout_constraintStart_toEndOf="@+id/MovieDetailsPieChart"
                 app:layout_constraintTop_toTopOf="@+id/MovieDetailsPieChart" />
 
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="textView7,textView5,textView6,MovieDetailsScreenPlayName,MovieDetailsStoryName,MovieDetailsDirectorName" />
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
@@ -97,9 +104,10 @@
                 android:layout_marginBottom="@dimen/smallMargin"
                 android:text="@string/screenplay"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/MovieDetailsScreenPlayName"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
                 app:layout_constraintEnd_toEndOf="@+id/MovieDetailsScreenPlayName"
-                app:layout_constraintStart_toStartOf="@+id/MovieDetailsScreenPlayName" />
+                app:layout_constraintStart_toStartOf="@+id/MovieDetailsScreenPlayName"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/barrier"
@@ -113,12 +121,14 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/story"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/MovieDetailsStoryName"
+                app:layout_constraintBottom_toBottomOf="@+id/textView6"
                 app:layout_constraintEnd_toEndOf="@+id/MovieDetailsStoryName"
-                app:layout_constraintStart_toStartOf="@+id/MovieDetailsStoryName" />
+                app:layout_constraintStart_toStartOf="@+id/MovieDetailsStoryName"
+                app:layout_constraintTop_toTopOf="@+id/textView6" />
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/MovieDetailsPieChart"
@@ -151,34 +161,34 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/smallMargin"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="@dimen/smallMargin"
                 android:text="@string/unknown"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/midFontSize"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/MovieDetailsDirectorName"
                 app:layout_constraintEnd_toStartOf="@+id/MovieDetailsStoryName"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/MovieDetailsDirectorName"
-                app:layout_constraintTop_toTopOf="@+id/MovieDetailsDirectorName" />
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <TextView
                 android:id="@+id/MovieDetailsStoryName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/smallMargin"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="@dimen/smallMargin"
                 android:text="@string/unknown"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="@dimen/midFontSize"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/MovieDetailsScreenPlayName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/MovieDetailsScreenPlayName"
-                app:layout_constraintTop_toTopOf="@+id/MovieDetailsScreenPlayName" />
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -188,30 +198,37 @@
                 android:text="@string/release_date"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/MovieDetailsDirectorName"
-                app:layout_constraintStart_toStartOf="@+id/MovieDetailsDirectorName"
-                app:layout_constraintTop_toBottomOf="@+id/MovieDetailsDirectorName" />
+                app:layout_constraintEnd_toStartOf="@+id/textView12"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barrier3" />
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/smallMargin"
                 android:text="@string/run_time"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/MovieDetailsRunTime"
+                app:layout_constraintBottom_toBottomOf="@+id/textView11"
                 app:layout_constraintEnd_toEndOf="@+id/MovieDetailsScreenPlayName"
-                app:layout_constraintStart_toStartOf="@+id/MovieDetailsScreenPlayName" />
+                app:layout_constraintEnd_toStartOf="@+id/textView16"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="@+id/MovieDetailsScreenPlayName"
+                app:layout_constraintTop_toTopOf="@+id/textView11" />
 
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/smallMargin"
                 android:text="@string/status"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/MovieDetailsStatus"
-                app:layout_constraintEnd_toEndOf="@+id/MovieDetailsStoryName"
-                app:layout_constraintStart_toStartOf="@+id/MovieDetailsStoryName" />
+                app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintStart_toStartOf="@+id/MovieDetailsStoryName"
+                app:layout_constraintTop_toTopOf="@+id/textView12" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/movieDetailsPoster"
@@ -243,27 +260,27 @@
                 android:id="@+id/MovieDetailsRunTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/unknown"
                 android:textColor="@color/black"
                 android:textSize="@dimen/midFontSize"
-                app:layout_constraintBottom_toBottomOf="@+id/MovieDetailsReleaseDate"
                 app:layout_constraintEnd_toEndOf="@+id/textView12"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@+id/textView12"
-                app:layout_constraintTop_toTopOf="@+id/MovieDetailsReleaseDate" />
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
             <TextView
                 android:id="@+id/MovieDetailsStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/unknown"
                 android:textColor="@color/black"
                 android:textSize="@dimen/midFontSize"
-                app:layout_constraintBottom_toBottomOf="@+id/MovieDetailsRunTime"
                 app:layout_constraintEnd_toEndOf="@+id/textView16"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@+id/textView16"
-                app:layout_constraintTop_toTopOf="@+id/MovieDetailsRunTime" />
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
             <TextView
                 android:id="@+id/textView17"
