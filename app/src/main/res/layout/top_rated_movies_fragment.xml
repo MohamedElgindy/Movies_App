@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TopRatedMoviesViewFlipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appLoadingLayoutTopRatedMovies"
+        layout="@layout/app_loading_screen" />
+
+    <include
+        android:id="@+id/errorLayoutTopRatedMovies"
+        layout="@layout/app_error_layout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/TopRatedMoviesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.TopRatedMovies.TopRatedMoviesFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/moreTopRatedMovies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/smallMargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ViewFlipper>

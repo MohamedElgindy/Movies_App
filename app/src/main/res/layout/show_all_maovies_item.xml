@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/smallMargin"
+    android:elevation="@dimen/headMargin"
+    app:cardCornerRadius="@dimen/smallMargin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/showAllUpComingMoviesConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/showAllMoviesPoster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:circularflow_defaultRadius="@dimen/smallMargin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/movieRatePieChart"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="@+id/showAllMoviesPoster"
+            app:layout_constraintEnd_toEndOf="@+id/showAllMoviesPoster"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/showAllMoviesPoster"
+            app:layout_constraintTop_toBottomOf="@+id/showAllMoviesPoster" />
+
+        <TextView
+            android:id="@+id/showAllMoviesMovieName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/unknown"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/showAllMoviesPoster"
+            app:layout_constraintStart_toStartOf="@+id/showAllMoviesPoster"
+            app:layout_constraintTop_toBottomOf="@+id/movieRatePieChart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

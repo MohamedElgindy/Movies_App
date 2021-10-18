@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="headFontSize">22sp</dimen>
+    <dimen name="midFontSize">18sp</dimen>
+    <dimen name="smallMargin">8dp</dimen>
+    <dimen name="midMargin">12dp</dimen>
+    <dimen name="headMargin">16dp</dimen>
+</resources>

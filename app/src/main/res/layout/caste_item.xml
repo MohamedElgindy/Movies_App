@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/smallMargin"
+    android:layout_marginEnd="@dimen/smallMargin"
+    android:elevation="@dimen/headMargin"
+    app:cardCornerRadius="@dimen/smallMargin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/actorImage"
+            android:layout_width="400dp"
+            android:layout_height="600dp"
+            android:contentDescription="@string/actor_image"
+            android:src="@drawable/person_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/actorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallMargin"
+            android:text="@string/unknown"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/actorImage"
+            app:layout_constraintStart_toStartOf="@+id/actorImage"
+            app:layout_constraintTop_toBottomOf="@+id/actorImage" />
+
+        <TextView
+            android:id="@+id/characterName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/headMargin"
+            android:layout_marginBottom="@dimen/headMargin"
+            android:text="@string/unknown"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/actorName"
+            app:layout_constraintStart_toStartOf="@+id/actorName"
+            app:layout_constraintTop_toBottomOf="@+id/actorName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

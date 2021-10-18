@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewFlipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appLoadingLayoutActorDetails"
+        layout="@layout/app_loading_screen" />
+
+    <include
+        android:id="@+id/errorLayoutActorDetails"
+        layout="@layout/app_error_layout" />
+
+    <androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/actorDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.fragments.ActorDetails.ActorDetailsFragment">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/actorImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/smallMargin"
+                android:layout_marginTop="@dimen/smallMargin"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintEnd_toEndOf="@id/barrier2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/known_for"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/actorImageView" />
+
+            <TextView
+                android:id="@+id/knownForTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/unknown"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                app:layout_constraintEnd_toEndOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/gender"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/knownForTV" />
+
+            <TextView
+                android:id="@+id/genderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/unknown"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/birthday"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/genderTV" />
+
+            <TextView
+                android:id="@+id/birthdayTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/unknown"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                app:layout_constraintEnd_toEndOf="@+id/textView15"
+                app:layout_constraintStart_toStartOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/place_of_birth"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/barrier2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/birthdayTV" />
+
+            <TextView
+                android:id="@+id/placeOfBirthTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/unknown"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView18"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                app:layout_constraintVertical_bias="0.00999999" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="genderTV,birthdayTV,placeOfBirthTV,textView9,textView13,textView15,textView18,knownForTV,actorImageView" />
+
+            <TextView
+                android:id="@+id/actorNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/unknown"
+                android:textColor="@color/black"
+                android:textSize="@dimen/headFontSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/barrier2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/biography"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/barrier2"
+                app:layout_constraintTop_toBottomOf="@+id/actorNameTV" />
+
+            <TextView
+                android:id="@+id/biographyTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/smallMargin"
+                android:layout_marginTop="@dimen/smallMargin"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:text="@string/unknown"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/barrier2"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/known_for"
+                android:textColor="@color/black"
+                android:textSize="@dimen/midFontSize"
+                app:layout_constraintEnd_toEndOf="@+id/biographyTV"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/barrier2"
+                app:layout_constraintTop_toBottomOf="@+id/biographyTV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/knownForRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/barrier2"
+                app:layout_constraintTop_toBottomOf="@+id/textView24"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</ViewFlipper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/smallMargin"
+    android:elevation="@dimen/headMargin"
+    app:cardCornerRadius="@dimen/midMargin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actorConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/moviePosterActorDetailsImageView"
+            android:layout_width="400dp"
+            android:layout_height="600dp"
+            android:adjustViewBounds="true"
+            android:src="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/movieNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/headMargin"
+            android:layout_marginEnd="@dimen/smallMargin"
+            android:layout_marginBottom="@dimen/headMargin"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/midFontSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/moviePosterActorDetailsImageView"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toStartOf="@+id/moviePosterActorDetailsImageView"
+            app:layout_constraintTop_toBottomOf="@+id/moviePosterActorDetailsImageView"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
